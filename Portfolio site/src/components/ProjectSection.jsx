@@ -20,15 +20,15 @@ const projects = [
         demoUrl: "#",
         githubUrl: "#"
     },
-    {
-        id: 3,
-        title: "MovieBoggle",
-        description: "It is movie site landing page made with React",
-        image: "/projects/home-page.png",
-        tags: ["React", "Api"],
-        demoUrl: "#",
-        githubUrl: "#"
-    }
+    // {
+    //     id: 3,
+    //     title: "MovieBoggle",
+    //     description: "It is movie site landing page made with React",
+    //     image: "/projects/home-page.png",
+    //     tags: ["React", "Api"],
+    //     demoUrl: "#",
+    //     githubUrl: "#"
+    // }
 ]
 
 export const ProjectSection = () => {

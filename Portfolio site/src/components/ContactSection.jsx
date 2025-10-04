@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail, Map, Phone, Send, Twitter, X } from "lucide-react"
+import { DiscIcon, Instagram, Linkedin, Mail, Map, Phone, Send, Twitter, X } from "lucide-react"
 import { cn } from "../lib/util"
 import { useToast } from "../hooks/use-toast"
 import { useState } from "react";
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="pt-8">
+                        <div className="pt-8 px-6 scale-120">
                             <h4>Connect with me</h4>
                             <div className="flex space-x-4 justify-center">
                                 <a href="#" target="_blank">
