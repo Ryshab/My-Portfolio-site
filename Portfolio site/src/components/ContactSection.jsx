@@ -8,18 +8,39 @@ import { useState } from "react";
 export const ContactSection = () => {
     const {toast} = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false)
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        
-        setIsSubmitting(true)
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
 
-        setTimeout(() => {
+        const formData = new FormData(e.target);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const result = await response.json();
+            if (response.ok && result.success) {
+                toast({
+                    title: "Message sent!",
+                    description: "Thank you for your message. I'll get back to you soon."
+                });
+                e.target.reset();
+            } else {
+                toast({
+                    title: "Error",
+                    description: result.message || "Failed to send message. Please try again."
+                });
+                console.error("Web3Forms error:", result);
+            }
+        } catch (err) {
             toast({
-                title: "Message sent!",
-                description: "Thank you for message. I'll get back to you soon."
-            })
-            setIsSubmitting(false)
-        }, 1500)
+                title: "Error",
+                description: "Failed to send message. Please try again."
+            });
+            console.error("Network error:", err);
+        }
+        setIsSubmitting(false);
     }
     return (
         <section 
@@ -42,7 +63,18 @@ export const ContactSection = () => {
                                     <Mail className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium ">Email</h4>
+                                    <h4 className="font-medium -ml-18">Email 1</h4>
+                                    <a href="mailto:rishabhydv2405@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                        rishabhydv2405@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-start space-x-4">
+                                <div className="p-3 rounded-full bg-primary/10 ">
+                                    <Mail className="h-6 w-6 text-primary"/>
+                                </div>
+                                <div>
+                                    <h4 className="font-medium -ml-4">Email 2</h4>
                                     <a href="mailto:ryid786@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                         ryid786@gmail.com
                                     </a>
@@ -86,10 +118,14 @@ export const ContactSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+                    <div className="bg-card p-8 rounded-lg shadow-xs">
                         <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-                        <form action="" className="space-y-6">
+                        <form 
+                            onSubmit={handleSubmit}
+                            className="space-y-6"
+                        >
+                            <input type="hidden" name="access_key" value="ec8b3d8a-b4a8-4a0d-9aa6-4d42435a9f6f" />
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                                 <input 
@@ -124,12 +160,11 @@ export const ContactSection = () => {
                             </div>
                             <button 
                                 type="submit"
-                                disabled= {isSubmitting}
-                                className={cn(
-                                    "cosmic-button w-full flex items-center justify-center gap-2",
-                                    
-                                )}
-                                >{isSubmitting ? "Sending..." : "Send Message"} <Send size={16} /></button>
+                                disabled={isSubmitting}
+                                className={cn("cosmic-button w-full flex items-center justify-center gap-2")}
+                            >
+                                {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
+                            </button>
                         </form>
                     </div>
                 </div>
