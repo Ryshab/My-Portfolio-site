@@ -14,11 +14,9 @@ export const AboutSection = () => {
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
                         <p className="text-muted-foreground">
-                            A quiet breeze drifted through the small park, carrying with it the scent of damp earth and fallen leaves. A few children chased each other around the swings while their parents watched from nearby benches, lost in quiet conversations. The golden light of the setting sun painted long shadows across the ground, giving the ordinary scene a gentle glow. For a brief moment, it felt as though time had slowed down, allowing even the smallest details—the rustle of branches, the laughter in the air—to stand out more vividly than usual.
-                        </p>
+                            I have always been passionate about technology and enjoy exploring new tools, frameworks, and programming languages. I’m driven by curiosity and a genuine love for solving real-world problems through code, constantly seeking opportunities to expand my knowledge and improve my skills.                        </p>
                         <p className="text-muted-foreground">
-                            A quiet breeze drifted through the small park, carrying with it the scent of damp earth and fallen leaves. A few children chased each other around the swings while their parents watched from nearby benches, lost in quiet conversations. The golden light of the setting sun painted long shadows across the ground, giving the ordinary scene a gentle glow. For a brief moment, it felt as though time had slowed down, allowing even the smallest details—the rustle of branches, the laughter in the air—to stand out more vividly than usual.
-                        </p>
+                            Staying up-to-date with the latest tech trends energizes me, and I thrive when learning something new or overcoming technical challenges. My goal is to contribute meaningfully to the tech community and grow as a developer, guided by a hunger for discovery and continuous improvement.                        </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="cosmic-button">

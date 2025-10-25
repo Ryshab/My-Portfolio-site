@@ -5,30 +5,30 @@ const projects = [
     {
         id: 1,
         title: "MovieBoggle",
-        description: "It is movie site landing page made with React",
+        description: "It is landing page for movie site made using React",
         image: "/projects/home-page.png",
-        tags: ["React", "Api", "tailwind"],
-        demoUrl: "#",
-        githubUrl: "https://github.com/Ryshab"
+        tags: ["React", "Api"],
+        demoUrl: "https://movieboggle.netlify.app/",
+        githubUrl: "https://github.com/Ryshab/Movie-Site/"
     },
     {
         id: 2,
-        title: "MovieBoggle",
-        description: "It is movie site landing page made with React",
-        image: "/projects/home-page.png",
-        tags: ["React", "Api"],
-        demoUrl: "#",
-        githubUrl: "#"
+        title: "ClipFart",
+        description: "Full Stack E-commerce Website built with Spring Boot and React",
+        image: "/projects/clipfart.png",
+        tags: ["React", "Spring Boot", "PostgreSQL", "Docker"],
+        demoUrl: "https://clipfart.vercel.app/",
+        githubUrl: "https://github.com/Ryshab/ClipFart/"
     },
-    // {
-    //     id: 3,
-    //     title: "MovieBoggle",
-    //     description: "It is movie site landing page made with React",
-    //     image: "/projects/home-page.png",
-    //     tags: ["React", "Api"],
-    //     demoUrl: "#",
-    //     githubUrl: "#"
-    // }
+    {
+        id: 3,
+        title: "Rock-Paper-Scissors Game",
+        description: "It is a simple Rock-Paper-Scissors game built using HTML, CSS, and JavaScript.",
+        image: "/projects/rps.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        demoUrl: "https://rock-paper-scissors-rish.vercel.app/",
+        githubUrl: "https://github.com/Ryshab/Rock-Paper-Scissors/"
+    }
 ]
 
 export const ProjectSection = () => {

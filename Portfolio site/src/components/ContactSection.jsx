@@ -63,7 +63,7 @@ export const ContactSection = () => {
                                     <Mail className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium -ml-18">Email 1</h4>
+                                    <h4 className="font-medium -ml-25">Email 1</h4>
                                     <a href="mailto:rishabhydv2405@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                         rishabhydv2405@gmail.com
                                     </a>
@@ -74,7 +74,7 @@ export const ContactSection = () => {
                                     <Mail className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div>
-                                    <h4 className="font-medium -ml-4">Email 2</h4>
+                                    <h4 className="font-medium -ml-8">Email 2</h4>
                                     <a href="mailto:ryid786@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                         ryid786@gmail.com
                                     </a>
@@ -125,7 +125,7 @@ export const ContactSection = () => {
                             onSubmit={handleSubmit}
                             className="space-y-6"
                         >
-                            <input type="hidden" name="access_key" value="ec8b3d8a-b4a8-4a0d-9aa6-4d42435a9f6f" />
+                            <input type="hidden" name="access_key" value={import.meta.env.VITE_VALUE} />
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                                 <input 
